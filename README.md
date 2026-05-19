@@ -51,8 +51,8 @@ Built using Python, OpenCV, MediaPipe, and Face Recognition.
 
 | Name | GitHub |
 |---|---|
-| Aman Sharma | [Amansharma-amn](https://github.com/Amansharma-amn) |
 | Aman | [Amansharmacs1](https://github.com/Amansharmacs1) |
+| Aman Sharma | [Amansharma-amn](https://github.com/Amansharma-amn) |
 | Anumati Sharma | [AnumatiSharma](https://github.com/AnumatiSharma) |
 | Anurag Sharma | [Anuragg303](https://github.com/Anuragg303) |
 
