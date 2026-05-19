@@ -54,13 +54,15 @@ const Hero = () => {
             transition={{ duration: 1, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-wrap gap-5 mt-4"
           >
-            <button className="px-8 py-4 rounded-full bg-apple-text-primary text-apple-bg font-medium flex items-center gap-2 hover:scale-105 transition-transform duration-300 shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+            <a 
+              href="https://github.com/Amansharmacs1/VisionX-AI"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 rounded-full bg-apple-text-primary text-apple-bg font-medium flex items-center gap-2 hover:scale-105 transition-transform duration-300 shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+            >
               Explore VisionX
               <ArrowRight className="w-4 h-4" />
-            </button>
-            <button className="px-8 py-4 rounded-full glass-panel text-apple-text-primary font-medium hover:bg-overlay-5 transition-colors duration-300">
-              Watch Film
-            </button>
+            </a>
           </motion.div>
         </motion.div>
 
