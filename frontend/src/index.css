@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme {
+  --color-apple-bg: #F5F5F7;
+  --color-apple-surface: #FFFFFF;
+  --color-apple-border: #E5E5EA;
+  --color-apple-text-primary: #1D1D1F;
+  --color-apple-text-secondary: #86868B;
+  --color-apple-accent: #0071E3;
+  --color-apple-accent-light: #2997FF;
+  
+  --color-overlay-2: rgba(0,0,0,0.02);
+  --color-overlay-4: rgba(0,0,0,0.04);
+  --color-overlay-5: rgba(0,0,0,0.05);
+  --color-overlay-8: rgba(0,0,0,0.08);
+  --color-overlay-10: rgba(0,0,0,0.1);
+  --color-overlay-20: rgba(0,0,0,0.2);
+  --color-overlay-50: rgba(0,0,0,0.5);
+
+  --color-dark-bg: var(--color-apple-bg);
+  --color-dark-card: rgba(255, 255, 255, 0.7);
+}
+
+.dark {
+  --color-apple-bg: #0B0D10;
+  --color-apple-surface: #111418;
+  --color-apple-border: #161B22;
+  --color-apple-text-primary: #F5F5F7;
+  --color-apple-text-secondary: #D0D4DA;
+  --color-apple-accent: #9AD7FF;
+  --color-apple-accent-light: #C8E6FF;
+
+  --color-overlay-2: rgba(255,255,255,0.02);
+  --color-overlay-4: rgba(255,255,255,0.04);
+  --color-overlay-5: rgba(255,255,255,0.05);
+  --color-overlay-8: rgba(255,255,255,0.08);
+  --color-overlay-10: rgba(255,255,255,0.1);
+  --color-overlay-20: rgba(255,255,255,0.2);
+  --color-overlay-50: rgba(255,255,255,0.5);
+
+  --color-dark-bg: var(--color-apple-bg);
+  --color-dark-card: rgba(17, 20, 24, 0.4);
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-dark-card backdrop-blur-3xl border border-[var(--color-overlay-5)] shadow-[0_8px_30px_rgba(0,0,0,0.04)];
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-apple-text-primary to-apple-text-secondary;
+  }
+  
+  .ambient-glow {
+    @apply relative;
+  }
+  
+  .ambient-glow::before {
+    content: '';
+    @apply absolute -inset-1 bg-gradient-to-r from-apple-accent/20 to-transparent rounded-3xl blur-2xl z-0 opacity-0 transition-opacity duration-700;
+  }
+  
+  .ambient-glow:hover::before {
+    @apply opacity-100;
+  }
+
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  }
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-apple-bg);
+  color: var(--color-apple-text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-apple-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-apple-border);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-apple-text-secondary);
+}
+
+/* Cinematic Mesh Background */
+.bg-mesh-pattern {
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(0, 113, 227, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 85% 30%, rgba(41, 151, 255, 0.03) 0%, transparent 50%);
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
+}
