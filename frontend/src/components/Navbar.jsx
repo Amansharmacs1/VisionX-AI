@@ -25,12 +25,12 @@ const Navbar = () => {
       className="fixed w-full z-50 top-6 px-4 md:px-8 flex justify-center pointer-events-none"
     >
       <div className="glass-panel w-full max-w-5xl px-6 py-3 flex justify-between items-center rounded-full pointer-events-auto shadow-2xl">
-        <div className="flex items-center gap-3">
+        <a href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
           <div className="w-8 h-8 rounded-full bg-apple-text-primary flex items-center justify-center shadow-md">
             <span className="font-bold text-apple-bg text-[10px] tracking-tighter">AI</span>
           </div>
           <span className="text-lg font-medium tracking-wide text-apple-text-primary">Vision<span className="text-apple-text-secondary">X</span></span>
-        </div>
+        </a>
         
         <div className="hidden md:flex items-center gap-1 text-sm font-medium text-apple-text-secondary">
           {['About', 'Features', 'Workflow', 'Team'].map((item) => (
